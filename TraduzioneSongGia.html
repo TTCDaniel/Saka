@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Webpage description goes here" />
+  <meta charset="utf-8">
+  <title>Song Gia Translation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+    textarea {
+      width: 35vw;
+      height: 50vh;
+    }
+  </style>
+
+  <script>
+    function Translate() {
+
+      var translations =
+        [
+          ["：", ": ", ": "],
+          ["", "⬜", "⬜"],
+
+          ["使用筒夾", "Pinza", "Tool clamping"],
+          ["孔徑", "Pinza", "Tool clamping"],
+          ["使用孔徑", "Pinza", "Tool clamping"],
+          ["使用螺帽", "Pinza", "Tool clamping"],
+          ["使用特殊筒夾", "Pinza", "Tool clamping"],
+          ["使用車刀", "Pinza", "Tool clamping"],
+		  ["使用刀盤", "Pinza", "Tool clamping"],
+		  ["鋸片孔徑", "Pinza", "Tool clamping"]/*"Diametro dell'albero", "Saw arbor size" */,
+				
+          ["最高轉數", "Velocità massima", "Maximum speed"],
+          ["最高轉速", "Velocità massima", "Maximum speed"],
+
+          ["鋸片心軸微調距離", "Regolazione di precisione", "Fine adjustment"] /*"Distanza di regolazione fine del mandrino della lama della sega"*/,
+          ["心軸微調距離", "Regolazione di precisione", "Fine adjustment"] /*"Distanza di regolazione fine dell'albero"*/,
+        
+		  ["微調距離", "Regolazione di precisione", "Fine adjustment"] /*"Distanza di spinta"*/,
+
+          ["上下微調距離", "Regolazione verticale", "Vertical adjustment"],
+          ["角度調整範圍", "Intervallo di regolazione dell'inclinazione", "Angle adjustment range"],
+          ["角度調整", "Angolazioni disponibili", "Angle adjustment"],
+          ["可用角度", "Angolazioni disponibili", "Angle adjustment"],
+		  ["最小分割角度", "Regolazione di precisione", "Fine adjustment"] /*"Angolo di divisione minimo"*/,
+          ["角度範圍", "Intervallo angolare", "Angle range"],
+
+
+
+          ["使用柄徑", "Diametro del gambo", "Shank diameter"],
+          ["鋸片柄徑", "Diametro del gambo", "Shank Diameter"],
+          ["鋸片尺寸", "Dimensioni della lama", "Saw blade size"],
+		  /* Blade model -> SAW BLADE!!!!*/
+
+
+          ["出水形式: 外出水 ", "Pressione", "Pressure"],
+          ["出水型式：外出水及中心出水", "Pressione", "Pressure"],
+          ["可中心出水", "Pressione", "Pressure"],
+
+          ["主軸", "Mandrino principale", "Main spindle"],
+          ["主軸筒夾", "Mandrino principale", "Main spindle"],
+
+
+          ["副軸", "Mandrino secondario", "Sub-spindle"],
+          ["副主軸筒夾", "Mandrino secondario", "Sub-spindle"],
+
+
+          ["最大夾持", "OD (max.)", "OD (max.)"],
+          ["度時最大銑削外徑", "OD (max.)", "OD (max.)"],
+          ["刀盤最大外徑", "OD (max.)", "OD (max.)"],
+		  ["鋸片最大外徑", "OD (max.)", "OD (max.)"],
+
+          ["使用車刀片", "Inserto di tornitura", "Turning insert"],
+          ["使用刀片座", "Portainserti", "Insert holder"],
+          ["適用刀片尺寸", "Dimensione inserto", "Insert size"],
+
+          ["刀座編號", "Portainserti no.", "Toolholder No."],
+
+          ["適用機種", "Modelli applicabili", "Machine model"],
+          ["適用機型", "Modelli applicabili", "Machine model"],
+          ["使用機種", "Modelli applicabili", "Machine model"],
+
+
+          ["崧嘉實業有限公司", "Song Gia Industrial Co., Ltd.", "Song Gia Industrial Co., Ltd."],
+
+
+
+
+          ["單位mm", "Unità mm", "unit mm"],
+
+          ["攻牙軸", "Albero di maschiatura", "Tapping shaft"],
+          ["原品號", "Codice prodotto originale", "Original product No."],
+          ["原廠編號", "Codice prodotto originale", "Original product No."],
+          ["日 期", "Data", "Date"],
+          ["核准者", "Approvato da", "Approved by"],
+          ["品 號", "Codice articolo", "Product No."],
+          ["設計者", "Progettista", "Designer"],
+          ["轉速比", "Rapporto di velocità", "Speed ratio"],
+          ["圖紙", "Disegno", "Drawing"],
+          ["版次", "Revisione", "Version"],
+          ["圖名", "Titolo", "Title"],
+          ["圖號", "Disegno n.", "Drawing No."],
+          ["螺絲", "Vite", "Screw"],
+
+
+
+          ["刀盤寬度", "Spessore", "Thickness"],
+
+
+          ["使用刀頭: 牙部", "Filettatura:", "Threads:"],
+
+
+
+
+          //["出水形式: 外出水", "Tipo di scarico: scarico esterno.", "Outlet type: External outlet"],
+          ["出水形式: 外出水", "", ""],
+
+          ["適用鑽孔軸柄", "Codolo", "Drill shank"],
+
+          ["(鑽孔軸)", "", ""],
+
+
+          ["Star機號", "Star no.", "Star no."],
+          ["Citizen編號", "Ref. No.", "Ref. No."],
+          ["星辰編號", "Ref. No.", "Ref. No."],
+
+          ["適用機型:洽群", "Modelli applicabili: CHIAH CHYUN", "Machine model: CHIAH CHYUN"],
+
+
+
+
+
+
+        ].sort(function (a, b) {
+          //order by length desc, to avoid collisions
+          return b[0].length - a[0].length;
+        });
+
+
+
+
+      chinese = $("#chinese").val();
+	  english =  italiano = chinese;
+
+      for (translation of translations) {
+		english = english.replaceAll(translation[0], translation[2]);
+        italiano = italiano.replaceAll(translation[0], translation[1]);
+      }
+      document.getElementById('english').textContent = document.getElementById('english').value = english;
+	  document.getElementById('italiano').textContent = document.getElementById('italiano').value = italiano;
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <form action="">
+      <textarea id="chinese" oninput="Translate()"></textarea>
+      <textarea id="english"></textarea>
+      <textarea id="italiano"></textarea>
+    </form>
+
+
+  </div>
+
+</body>
+
+</html>
