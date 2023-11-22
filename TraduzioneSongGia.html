@@ -32,6 +32,7 @@
           ["使用車刀", "Pinza", "Tool clamping"],
 		  ["使用刀盤", "Pinza", "Tool clamping"],
 		  ["鋸片孔徑", "Pinza", "Tool clamping"]/*"Diametro dell'albero", "Saw arbor size" */,
+		  ["使用柄徑", "Pinza", "Tool clamping"]/*["使用柄徑", "Diametro del gambo", "Shank diameter"]*/,
 				
           ["最高轉數", "Velocità massima", "Maximum speed"],
           ["最高轉速", "Velocità massima", "Maximum speed"],
@@ -50,7 +51,7 @@
 
 
 
-          ["使用柄徑", "Diametro del gambo", "Shank diameter"],
+          
           ["鋸片柄徑", "Diametro del gambo", "Shank Diameter"],
           ["鋸片尺寸", "Dimensioni della lama", "Saw blade size"],
 		  /* Blade model -> SAW BLADE!!!!*/
@@ -142,7 +143,7 @@
 
 
 
-      chinese = $("#chinese").val();
+      chinese = $("#chinese").val().replace(new RegExp('([ ])?([0-9]+)、', 'g'),"").replace(new RegExp('([0-9]+)+(RPM)', 'g'),"$1 $2");
 	  english =  italiano = chinese;
 
       for (translation of translations) {
