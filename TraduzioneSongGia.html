@@ -24,66 +24,70 @@
           ["：", ": ", ": "],
           ["", "⬜", "⬜"],
 
-          ["使用筒夾", "Pinza", "Tool clamping"],
-          ["孔徑", "Pinza", "Tool clamping"],
-          ["使用孔徑", "Pinza", "Tool clamping"],
-          ["使用螺帽", "Pinza", "Tool clamping"],
-          ["使用特殊筒夾", "Pinza", "Tool clamping"],
-          ["使用車刀", "Pinza", "Tool clamping"],
-		  ["使用刀盤", "Pinza", "Tool clamping"],
+		  //TOOL CLAMPING
+          ["使用筒夾", "Pinza", "Tool clamping"]/*Use collet*/,
+          ["孔徑", "Pinza", "Tool clamping"] /*Aperture*/,
+          ["使用孔徑", "Pinza", "Tool clamping"] /*Use aperture*/,
+          ["使用螺帽", "Pinza", "Tool clamping"] /*Use nuts*/,
+          ["使用特殊筒夾", "Pinza", "Tool clamping"] /*Use special collets*/,
+          ["使用車刀", "Pinza", "Tool clamping"]/*Use turning/lathe tool*/,
+		  ["使用刀盤", "Pinza", "Tool clamping"] /*Use cutterhead*/,
 		  ["鋸片孔徑", "Pinza", "Tool clamping"]/*"Diametro dell'albero", "Saw arbor size" */,
-		  ["使用柄徑", "Pinza", "Tool clamping"]/*["使用柄徑", "Diametro del gambo", "Shank diameter"]*/,
+		  ["使用柄徑", "Pinza", "Tool clamping"]/*"Diametro del gambo", "Shank diameter"]*/,
+		  ["使用刀柄", "Pinza", "Tool clamping"]/*Use handle*/,
+		  
+		  //TOOL CLAMPING EXTRA
+		  ["主軸", "Pinza", "Tool clamping"]/*"Mandrino principale", "Spindle"]*/,
+          ["主軸筒夾", "Pinza", "Tool clamping"] /*"Pinza del mandrino", "Spindle collet"*/,
+		  ["副軸", "Pinza", "Tool clamping"] /*"Mandrino secondario", "Countershaft"] /*mandrino secondario */,
+          ["副主軸筒夾", "Pinza", "Tool clamping"]/*"Pinza del contromandrino", "Sub-spindle collet"]*/,
 				
-          ["最高轉數", "Velocità massima", "Maximum speed"],
-          ["最高轉速", "Velocità massima", "Maximum speed"],
+		  //MAXIMUM SPEED
+          ["最高轉數", "Velocità massima", "Maximum speed"]/*Maximum RPM*/,
+          ["最高轉速", "Velocità massima", "Maximum speed"]/*Maximum speed*/,
 
-          ["鋸片心軸微調距離", "Regolazione di precisione", "Fine adjustment"] /*"Distanza di regolazione fine del mandrino della lama della sega"*/,
-          ["心軸微調距離", "Regolazione di precisione", "Fine adjustment"] /*"Distanza di regolazione fine dell'albero"*/,
-        
+		  //ADJUSTMENT
+		 ["角度調整範圍", "Regolazione", "Adjustment"]/*"Intervallo di regolazione dell'inclinazione", "Angle adjustment range"*/,
 		  ["微調距離", "Regolazione di precisione", "Fine adjustment"] /*"Distanza di spinta"*/,
+		  ["上下微調距離", "Regolazione", "Adjustment"] /*"Regolazione verticale", "Vertical adjustment"*/,
+		  		  ["可用角度", "Regolazione", "Adjustment"] /* "Angolazioni disponibili", "Available angles"*/,
+		  ["角度調整", "Regolazione", "Adjustment"]/*"Regolazione angolo", "Angle adjustment"*/,
 
-          ["上下微調距離", "Regolazione verticale", "Vertical adjustment"],
-          ["角度調整範圍", "Intervallo di regolazione dell'inclinazione", "Angle adjustment range"],
-          ["角度調整", "Angolazioni disponibili", "Angle adjustment"],
-          ["可用角度", "Angolazioni disponibili", "Angle adjustment"],
-		  ["最小分割角度", "Regolazione di precisione", "Fine adjustment"] /*"Angolo di divisione minimo"*/,
-          ["角度範圍", "Intervallo angolare", "Angle range"],
-
-
-
+		  // FINE ADJUSTMENT
+		  ["鋸片心軸微調距離", "Regolazione di precisione", "Fine adjustment"] /*"Distanza di regolazione fine del mandrino della lama della sega"*/,
+		  ["心軸微調距離", "Regolazione di precisione", "Fine adjustment"] /*"Distanza di regolazione fine dell'albero", "Spindle fine adjustment distance"*/,
+		  ["最小分割角度", "Regolazione di precisione", "Fine adjustment"] /*"Regolazione minima angolo", "Minimum split angle"*/,
+			["角度範圍",  "Regolazione di precisione", "Fine adjustment"]  /*"Intervallo angolare", "Angle range"]*/,
+		  
           
-          ["鋸片柄徑", "Diametro del gambo", "Shank Diameter"],
+          ["鋸片柄徑", "Diametro del gambo", "Shank Diameter"] /*Saw blade shank diameter*/,
           ["鋸片尺寸", "Dimensioni della lama", "Saw blade size"],
 		  ["銑牙最大尺寸","Filettatura massima","Thread max"],
 		  /* Blade model -> SAW BLADE!!!!*/
+          ["出水形式: 外出水 ", "Pressione", "Pressure"]/*Water outlet form: outside water*/,
+          ["出水型式：外出水及中心出水", "Pressione", "Pressure"]/*Water outlet type: outer outlet and central outlet*/,
+          //["可中心出水", "Pressione", "Pressure"]/*Water can be discharged from the center*/,
+
+          ["使用鋸片內徑", "ID" ,"ID"/*Inner diameter*/],
+		  ["最大夾持", "OD (max.)", "OD (max.)"/*Maximum clamping*/],
+          ["度時最大銑削外徑", "OD (max.)", "OD (max.)"/*Maximum milling outer diameter*/],
+          ["刀盤最大外徑", "OD (max.)", "OD (max.)" /*Maximum outer diameter of cutterhead*/],
+		  ["鋸片最大外徑", "OD (max.)", "OD (max.)" /*Saw blade maximum outer diameter*/],
+
+          ["使用車刀片", "Inserto di tornitura", "Turning insert"]/*Use turning blade*/,
+          ["使用刀片座", "Portainserti", "Insert holder"]/*Use the blade holder*/,
+          ["適用刀片尺寸", "Dimensione inserto", "Insert size"] /*Applicable blade size*/,
+
+          ["刀座編號", "Portainserti no.", "Toolholder No."]/*Tool holder number*/,
 
 
-          ["出水形式: 外出水 ", "Pressione", "Pressure"],
-          ["出水型式：外出水及中心出水", "Pressione", "Pressure"],
-          ["可中心出水", "Pressione", "Pressure"],
+          ["適用機種", "Modelli applicabili", "Machine model"/*Applicable models*/],
+          ["適用機型", "Modelli applicabili", "Machine model"/*Applicable models*/],
+          ["使用機種", "Modelli applicabili", "Machine model"/*Model used*/],
+	  
+		   ["刀盤寬度", "Spessore", "Thickness" /*Cutterhead width*/],
+          ["使用刀頭: 牙部", "Filettatura", "Threads" /*Use the cutter head: tooth part*/],
 
-          ["主軸", "Mandrino principale", "Main spindle"],
-          ["主軸筒夾", "Mandrino principale", "Main spindle"],
-
-
-          ["副軸", "Mandrino secondario", "Sub-spindle"],
-          ["副主軸筒夾", "Mandrino secondario", "Sub-spindle"],
-
-
-          ["最大夾持", "OD (max.)", "OD (max.)"],
-          ["度時最大銑削外徑", "OD (max.)", "OD (max.)"],
-          ["刀盤最大外徑", "OD (max.)", "OD (max.)"],
-		  ["鋸片最大外徑", "OD (max.)", "OD (max.)"],
-
-          ["使用車刀片", "Inserto di tornitura", "Turning insert"],
-          ["使用刀片座", "Portainserti", "Insert holder"],
-          ["適用刀片尺寸", "Dimensione inserto", "Insert size"],
-
-          ["刀座編號", "Portainserti no.", "Toolholder No."],
-
-          ["適用機種", "Modelli applicabili", "Machine model"],
-          ["適用機型", "Modelli applicabili", "Machine model"],
-          ["使用機種", "Modelli applicabili", "Machine model"],
 
 
           ["崧嘉實業有限公司", "Song Gia Industrial Co., Ltd.", "Song Gia Industrial Co., Ltd."],
@@ -93,9 +97,9 @@
 
           ["單位mm", "Unità mm", "unit mm"],
 
-          ["攻牙軸", "Albero di maschiatura", "Tapping shaft"],
-          ["原品號", "Codice prodotto originale", "Original product No."],
-          ["原廠編號", "Codice prodotto originale", "Original product No."],
+          ["攻牙軸", "Albero di maschiatura", "Tapping shaft"/*Tapping axis*/],
+          ["原品號", "Codice prodotto originale", "Original product No."/*Original product number*/],
+          ["原廠編號", "Codice prodotto originale", "Original product No."/*Original factory number*/],
           ["日 期", "Data", "Date"],
           ["核准者", "Approvato da", "Approved by"],
           ["品 號", "Codice articolo", "Product No."],
@@ -109,31 +113,23 @@
 
 
 
-          ["刀盤寬度", "Spessore", "Thickness"],
-
-
-          ["使用刀頭: 牙部", "Filettatura:", "Threads:"],
-
+         
 
 
 
           //["出水形式: 外出水", "Tipo di scarico: scarico esterno.", "Outlet type: External outlet"],
           ["出水形式: 外出水", "", ""],
 
-          ["適用鑽孔軸柄", "Codolo", "Drill shank"],
+          ["適用鑽孔軸柄", "Codolo", "Drill shank"] /*Suitable for drilling arbor*/,
 
-          ["(鑽孔軸)", "", ""],
+          ["(鑽孔軸)", "", "" /*Drilling shaft*/],
 
-
-          ["Star機號", "Star no.", "Star no."],
+		  ["Star 刀具編號", "Star No.", "Star No." /* Reference code */],
+          ["Star機號", "Star No.", "Star No."],
           ["Citizen編號", "Ref. No.", "Ref. No."],
-          ["星辰編號", "Ref. No.", "Ref. No."],
+          ["星辰編號", "Ref. No.", "Ref. No." /*star number*/],
 
           ["適用機型:洽群", "Modelli applicabili: CHIAH CHYUN", "Machine model: CHIAH CHYUN"],
-
-
-
-
 
 
         ].sort(function (a, b) {
